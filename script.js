@@ -2,6 +2,7 @@
 let buildingName = 'Tower'
 let costGold = 30
 
+
 if (gold >= costGold) {
     gold -= costGold
     console.log(`${buildingName}: work complete`);
