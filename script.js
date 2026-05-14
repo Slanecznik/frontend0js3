@@ -67,7 +67,6 @@ const car = {
     prev_owners: ["Daniel", "Natalia", "Elena"]
 }
 
-
 const pet = {
     name: 'Strider',
     happiness: 50,
