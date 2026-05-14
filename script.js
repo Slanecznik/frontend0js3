@@ -42,6 +42,7 @@
 //     return newArray 
 // }
 
+
 // console.log(reverseArray([1, 2, 3, 4]))
 
 function removeElement(array, element) {
