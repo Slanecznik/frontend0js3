@@ -9,7 +9,6 @@
 // const myScores = [82, 75, 91, 85, 93, 88, 99]
 // const average = calculateAverage(myScores)
 // console.log(`Средний балл студента: ${average}`) // Выведет средний балл
-
 // function classifyScores(scores) {
 //     const classifiedScores = []
 //     for (let i = 0; i < scores.length; i++) {
