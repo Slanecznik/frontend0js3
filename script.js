@@ -1,59 +1,45 @@
-// function calculateAverage(scores) {
-//     let sum = 0 // Инициализируем переменную для суммы оценок
-//     for (let i = 0; i < scores.length; i++) {
-//         sum += scores[i] // Добавляем каждую оценку к сумме
-//     }
-//     // Возвращаем средний балл округленный до ближайшего целого
-//     return Math.round(sum / scores.length)
+// // Объявляем глобальную переменную для хранения золота
+// let gold = 100
+//
+// // Попытка построить башню
+// let buildingName = 'Tower'
+// let costGold = 30
+//
+// // проверяем, хватает ли нам золота для строительства
+// if (gold >= costGold) {
+//     // вычитаем золото
+//     gold -= costGold // то же, что gold = gold - costGold
+//     console.log(`${buildingName}: work complete!`);
+// } else {
+//     console.log(`${buildingName}: not enough resources!`);
 // }
-// const myScores = [82, 75, 91, 85, 93, 88, 99]
-// const average = calculateAverage(myScores)
-// console.log(`Средний балл студента: ${average}`) // Выведет средний балл
-
-// function classifyScores(scores) {
-//     const classifiedScores = []
-//     for (let i = 0; i < scores.length; i++) {
-//         let grade // Переменная для хранения оценки
-//         const score = scores[i]
-//         if (score >= 90) {
-//             grade = 'A'
-//         } else if (score >= 80) {
-//             grade = 'B'
-//         } else if (score >= 70) {
-//             grade = 'C'
-//         } else if (score >= 50) {
-//             grade = 'D'
-//         } else {
-//             grade = 'F'
-//         }
-//         classifiedScores.push(grade)
-//     }
-//     return classifiedScores
-// }
-// const myScores = [82, 75, 91, 85, 93, 88, 99]
-// const classifiedScores = classifyScores(myScores)
-// console.log(`Classified scores: ${classifiedScores}`)
-
-
-// function reverseArray(array) {
-//     let newArray = [] 
-//     for (let i = array.length - 1; i >= 0; i--) {
-//         newArray[newArray.length] = array[i] 
-//     }
-//     return newArray 
+//
+// // Попытка построить кузницу
+// buildingName = 'Blacksmith'
+// costGold = 140
+//
+// if (gold >= costGold) {
+//     gold -= costGold
+//     console.log(`${buildingName}: work complete!`)
+// } else {
+//     console.log(`${buildingName}: not enough resources!`)
 // }
 
-// console.log(reverseArray([1, 2, 3, 4]))
+function createBuilding(buildingName, costGold) {
+    // Создаем переменную для проверки количества ресурса
+    const hasEnoughGold = gold >= costGold
 
-function removeElement(array, element) {
-    let newArray = []
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] !== element) {
-            newArray[newArray.length] = array[i]
-        }
+    if (hasEnoughGold) {
+        gold -= costGold
+        console.log(`${buildingName}: work complete!`)
+    } else {
+        console.log(`${buildingName}: not enough resources!`)
     }
-    return newArray
 }
 
-console.log(removeElement([1, 2, 3, 2, 4], 2))
-console.log(removeElement(["cat", "dog", "cat"], "cat"))
+// Глобальная переменная для хранения золота
+let gold = 100
+
+// Вызов функции
+createBuilding('Tower', 30) // Строим башню, золота хватает
+createBuilding('Blacksmith', 140) // Строить кузницу, золота не хватает
